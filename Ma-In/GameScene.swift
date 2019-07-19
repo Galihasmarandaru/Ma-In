@@ -32,6 +32,9 @@ class GameScene: SKScene {
     var player1Piece: SKSpriteNode = SKSpriteNode()
     var player2Piece: SKSpriteNode = SKSpriteNode()
     
+    // create the Player HUD
+    var player1Cash: SKLabelNode?
+    
     
     override func didMove(to view: SKView) {
         
