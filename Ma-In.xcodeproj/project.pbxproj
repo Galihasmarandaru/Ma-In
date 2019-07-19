@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1BD8F722E17DBF00896730 /* Multicolore.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA1BD8F522E17DBF00896730 /* Multicolore.otf */; };
+		CA1BD8F822E17DBF00896730 /* Multicolore-Vector-Font.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA1BD8F622E17DBF00896730 /* Multicolore-Vector-Font.txt */; };
+		CA1BD8FA22E1817600896730 /* collectionRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BD8F922E1817600896730 /* collectionRoll.swift */; };
 		CA5ABFCE22E08FA900880644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5ABFCD22E08FA900880644 /* AppDelegate.swift */; };
 		CA5ABFD422E08FA900880644 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5ABFD322E08FA900880644 /* GameScene.swift */; };
 		CA5ABFD622E08FA900880644 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5ABFD522E08FA900880644 /* GameViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA1BD8F522E17DBF00896730 /* Multicolore.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Multicolore.otf; sourceTree = "<group>"; };
+		CA1BD8F622E17DBF00896730 /* Multicolore-Vector-Font.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Multicolore-Vector-Font.txt"; sourceTree = "<group>"; };
+		CA1BD8F922E1817600896730 /* collectionRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionRoll.swift; sourceTree = "<group>"; };
 		CA5ABFCA22E08FA900880644 /* Ma-In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ma-In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5ABFCD22E08FA900880644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA5ABFD322E08FA900880644 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -39,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1BD8F422E17DBF00896730 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA1BD8F522E17DBF00896730 /* Multicolore.otf */,
+				CA1BD8F622E17DBF00896730 /* Multicolore-Vector-Font.txt */,
+			);
+			name = Fonts;
+			path = ../../../Downloads/Fonts;
+			sourceTree = "<group>";
+		};
 		CA5ABFC122E08FA900880644 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +74,7 @@
 		CA5ABFCC22E08FA900880644 /* Ma-In */ = {
 			isa = PBXGroup;
 			children = (
+				CA1BD8F422E17DBF00896730 /* Fonts */,
 				CA5ABFCD22E08FA900880644 /* AppDelegate.swift */,
 				CA5ABFE522E09ADF00880644 /* GameScene.sks */,
 				CA5ABFD322E08FA900880644 /* GameScene.swift */,
@@ -66,6 +83,7 @@
 				CA5ABFDA22E08FAA00880644 /* Assets.xcassets */,
 				CA5ABFDC22E08FAA00880644 /* LaunchScreen.storyboard */,
 				CA5ABFDF22E08FAA00880644 /* Info.plist */,
+				CA1BD8F922E1817600896730 /* collectionRoll.swift */,
 			);
 			path = "Ma-In";
 			sourceTree = "<group>";
@@ -129,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5ABFE622E09ADF00880644 /* GameScene.sks in Resources */,
+				CA1BD8F722E17DBF00896730 /* Multicolore.otf in Resources */,
+				CA1BD8F822E17DBF00896730 /* Multicolore-Vector-Font.txt in Resources */,
 				CA5ABFD922E08FA900880644 /* Main.storyboard in Resources */,
 				CA5ABFDB22E08FAA00880644 /* Assets.xcassets in Resources */,
 				CA5ABFDE22E08FAA00880644 /* LaunchScreen.storyboard in Resources */,
@@ -142,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1BD8FA22E1817600896730 /* collectionRoll.swift in Sources */,
 				CA5ABFD422E08FA900880644 /* GameScene.swift in Sources */,
 				CA5ABFD622E08FA900880644 /* GameViewController.swift in Sources */,
 				CA5ABFCE22E08FA900880644 /* AppDelegate.swift in Sources */,
