@@ -106,17 +106,17 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     // everytime player pass go(cutting down your income everytime pass go)
     func playerGotIncomeGo(playerID: Int){
         var given: Double = 50_000
-        given -= countPremium(player: Player.Player2)
+        given -= countPremium(playerID: playerID)
         playerCash[playerID] += given
     }
     
     // cutting down your cash every turn / cutting down your income every time pass go
-    func countPremium (player: Player) -> Double {
+    func countPremium (playerID: Int) -> Double {
         var premium: Double = 0
         var i = 0
         
         // player identification
-        if (player == .Player1) {
+        if (playerID == 0) {
             
             // validation of each type of player 1 insurance
             while (i < 4) {
@@ -125,7 +125,7 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
                 }
                 i += 1
             }
-        } else if (player == .Player2) {
+        } else if (playerID == 1) {
             
             // validation of each type of player 2 insurance
             while (i < 4) {

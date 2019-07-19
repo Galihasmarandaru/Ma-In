@@ -142,47 +142,16 @@ class GameScene: SKScene {
         
     }
     
-    // everytime player pass go(cutting down your income everytime pass go)
+    // everytime player pass go or landed on GO
     func playerPassGo(player: Player){
-        var given: Double = 50_000
-        
+        var playerID: Int = 0
         // player identification
         if (player == .Player1) {
-            given -= countPremium(player: Player.Player1)
-            playerCash[0] += given
+            GameViewController.playerGotIncomeGo()
         } else if (player == .Player2) {
-            given -= countPremium(player: Player.Player2)
-            playerCash[1] += given
+            GameViewController.playerGotIncomeGo()
         }
         
-    }
-    
-    // cutting down your cash every turn / cutting down your income every time pass go
-    func countPremium (player: Player) -> Double {
-        var premium: Double = 0
-        var i = 0
-        
-        // player identification
-        if (player == .Player1) {
-            
-            // validation of each type of player 1 insurance
-            while (i < 4) {
-                if (playerInsurance[0][i]) {
-                    premium += 2_000
-                }
-                i += 1
-            }
-        } else if (player == .Player2) {
-            
-            // validation of each type of player 2 insurance
-            while (i < 4) {
-                if (playerInsurance[1][i]) {
-                    premium += 2_000
-                }
-                i += 1
-            }
-        }
-        return premium
     }
     
     // everytime player landed on Move freely space or A9
