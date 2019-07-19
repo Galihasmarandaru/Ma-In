@@ -20,6 +20,10 @@ class GameViewController: UIViewController {
     var items:[String] = ["1", "2", "3", "4", "5", "6"]
 //    var scrollTimer = Timer()
     
+    // Player's Data
+    var playerCash: [Double] = [400_000, 400_000]
+    var playerInsurance = [[false, false, false, false],[false, false, false, false]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -97,5 +101,40 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.item)!")
+    }
+    
+    // everytime player pass go(cutting down your income everytime pass go)
+    func playerGotIncomeGo(playerID: Int){
+        var given: Double = 50_000
+        given -= countPremium(player: Player.Player2)
+        playerCash[playerID] += given
+    }
+    
+    // cutting down your cash every turn / cutting down your income every time pass go
+    func countPremium (player: Player) -> Double {
+        var premium: Double = 0
+        var i = 0
+        
+        // player identification
+        if (player == .Player1) {
+            
+            // validation of each type of player 1 insurance
+            while (i < 4) {
+                if (playerInsurance[0][i]) {
+                    premium += 2_000
+                }
+                i += 1
+            }
+        } else if (player == .Player2) {
+            
+            // validation of each type of player 2 insurance
+            while (i < 4) {
+                if (playerInsurance[1][i]) {
+                    premium += 2_000
+                }
+                i += 1
+            }
+        }
+        return premium
     }
 }
