@@ -16,7 +16,29 @@ enum Player: Int {
 
 class GameScene: SKScene {
     
-    var playerCash: [Double] = [400_000, 400_000]
+    var player1Cash: Double = 400_000{
+        didSet{
+            self.player1CashLabel.text = "$\(self.player1Cash)"
+        }
+    }
+    var player2Cash: Double = 400_000{
+        didSet{
+            self.player2CashLabel.text = "$\(self.player2Cash)"
+        }
+    }
+    
+    var player1CashChange: Double = 0{
+        didSet{
+            self.player1CashChangeLabel.text = "+$\(self.player1CashChange)"
+        }
+    }
+    
+    var player2CashChange: Double = 0{
+        didSet{
+            self.player2CashChangeLabel.text = "+$\(self.player2CashChange)"
+        }
+    }
+    
     var playerInsurance = [[false, false, false, false],[false, false, false, false]]
     
     // declare string player position
@@ -33,7 +55,10 @@ class GameScene: SKScene {
     var player2Piece: SKSpriteNode = SKSpriteNode()
     
     // create the Player HUD
-    var player1Cash: SKLabelNode?
+    var player1CashLabel: SKLabelNode = SKLabelNode()
+    var player2CashLabel: SKLabelNode = SKLabelNode()
+    var player1CashChangeLabel: SKLabelNode = SKLabelNode()
+    var player2CashChangeLabel: SKLabelNode = SKLabelNode()
     
     
     override func didMove(to view: SKView) {
@@ -152,10 +177,10 @@ class GameScene: SKScene {
         // player identification
         if (player == .Player1) {
             given -= countPremium(player: .Player1)
-            playerCash[0] += given
+            player1Cash += given
         } else if (player == .Player2) {
             given -= countPremium(player: .Player2)
-            playerCash[1] += given
+            player2Cash += given
             
         }
         
