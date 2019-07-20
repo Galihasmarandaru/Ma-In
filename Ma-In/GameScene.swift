@@ -16,6 +16,10 @@ enum Player: Int {
 
 class GameScene: SKScene {
     
+    //Validations of Income or Outcome
+    var isIncome = [false,false]
+    
+    // player's cash data dynacmically
     var player1Cash: Double = 400_000{
         didSet{
             self.player1CashLabel.text = "$\(self.player1Cash)"
@@ -178,10 +182,13 @@ class GameScene: SKScene {
         if (player == .Player1) {
             given -= countPremium(player: .Player1)
             player1Cash += given
+            player1CashChange = given
+            isIncome[0] = true
         } else if (player == .Player2) {
             given -= countPremium(player: .Player2)
             player2Cash += given
-            
+            player2CashChange = given
+            isIncome[1] = true
         }
         
     }
@@ -225,6 +232,94 @@ class GameScene: SKScene {
             
         }
         
+    }
+    
+    func mysteryCardRoll(player: Player){
+        var rngMysteryCard = Int.random(in: 1...10)
+        let given200: Double = 200_000
+        // animation start
+        // ......
+        switch rngMysteryCard {
+        // Back to Start
+        case 1:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        // Enemies Back to Start
+        case 2:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        // Go to Insurance you want
+        case 3:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        // Enemies go to Insurance
+        case 4:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        // Go to Surgery
+        case 5:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        // Enemies go to Surgery
+        case 6:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        // Get Money 200K
+        case 7:
+            if (player == .Player1){
+                player1Cash += given200
+                player1CashChange = given200
+                isIncome[0] = true
+            } else if (player == .Player2) {
+                player2Cash += given200
+                player2CashChange = given200
+                isIncome[1] = true
+            }
+        // Enemy got money 200K
+        case 8:
+            if (player == .Player1){
+                player2Cash += given200
+                player2CashChange = given200
+                isIncome[1] = true
+            } else if (player == .Player2) {
+                player1Cash += given200
+                player1CashChange = given200
+                isIncome[0] = false
+            }
+        // Go to Flooding
+        case 9:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        // Enemy go to Flooding
+        case 10:
+            if (player == .Player1){
+                
+            } else if (player == .Player2) {
+                
+            }
+        default: break;
+        }
     }
     
 //    override func update(_ currentTime: CFTimeInterval) {
