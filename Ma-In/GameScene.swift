@@ -322,12 +322,60 @@ class GameScene: SKScene {
         }
     }
     
+    // when the player landed on any type of Insurance
+    func landedOnInsurance (player: Player, currentSpace: String){
+        
+        if (player == .Player1) {
+            switch currentSpace{
+            case "A3":
+                break;
+            case "A7":
+                break;
+            case "A11":
+                break;
+            case "A15":
+                break;
+            default:
+                break;
+            }
+        } else if (player == .Player2){
+            
+            // Copy Paste the case for Player 1 to here
+            
+        }
+        
+    }
+    
+    // when the player landed on any type of Accident
     func accident(player: Player, currentSpace: String){
-        switch currentSpace {
-        case "Flooding":
-            break;
-        default:
-            break;
+        
+        if (player == .Player1){
+            
+            switch currentSpace {
+            case "A2":
+                break;
+            case "A4":
+                break;
+            case "A6":
+                break;
+            case "A8":
+                break;
+            case "A10":
+                break;
+            case "A12":
+                break;
+            case "A14":
+                break;
+            case "A16":
+                break;
+            default:
+                break;
+            }
+            
+        } else if (player == .Player2){
+            
+            // Copy Paste the case for Player 1 to here
+            
         }
     }
     
