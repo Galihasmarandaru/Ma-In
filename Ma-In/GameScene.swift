@@ -322,6 +322,15 @@ class GameScene: SKScene {
         }
     }
     
+    func accident(player: Player, currentSpace: String){
+        switch currentSpace {
+        case "Flooding":
+            break;
+        default:
+            break;
+        }
+    }
+    
 //    override func update(_ currentTime: CFTimeInterval) {
 //        <#code#>
 //    }
