@@ -10,6 +10,11 @@
 		CA1BD8F722E17DBF00896730 /* Multicolore.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA1BD8F522E17DBF00896730 /* Multicolore.otf */; };
 		CA1BD8F822E17DBF00896730 /* Multicolore-Vector-Font.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA1BD8F622E17DBF00896730 /* Multicolore-Vector-Font.txt */; };
 		CA1BD8FA22E1817600896730 /* collectionRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BD8F922E1817600896730 /* collectionRoll.swift */; };
+		CA41F6D622E2D08E0045811D /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F6D522E2D08E0045811D /* GameConstants.swift */; };
+		CA41F6D922E2D11B0045811D /* SpriteKitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F6D822E2D11B0045811D /* SpriteKitButton.swift */; };
+		CA41F6DC22E2D2C10045811D /* SceneManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F6DB22E2D2C10045811D /* SceneManagerDelegate.swift */; };
+		CA41F6E122E2D4BF0045811D /* OpeningClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F6E022E2D4BF0045811D /* OpeningClass.swift */; };
+		CA41F6E422E2F5380045811D /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41F6E322E2F5380045811D /* SKNode+Extensions.swift */; };
 		CA5ABFCE22E08FA900880644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5ABFCD22E08FA900880644 /* AppDelegate.swift */; };
 		CA5ABFD422E08FA900880644 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5ABFD322E08FA900880644 /* GameScene.swift */; };
 		CA5ABFD622E08FA900880644 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5ABFD522E08FA900880644 /* GameViewController.swift */; };
@@ -17,12 +22,20 @@
 		CA5ABFDB22E08FAA00880644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5ABFDA22E08FAA00880644 /* Assets.xcassets */; };
 		CA5ABFDE22E08FAA00880644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5ABFDC22E08FAA00880644 /* LaunchScreen.storyboard */; };
 		CA5ABFE622E09ADF00880644 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA5ABFE522E09ADF00880644 /* GameScene.sks */; };
+		CAF5920722E33F2300CBFA4D /* bg.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAF5920622E33F2300CBFA4D /* bg.wav */; };
+		CAF5920922E3539000CBFA4D /* RollPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF5920822E3539000CBFA4D /* RollPopup.swift */; };
+		CAF5920B22E353CF00CBFA4D /* PopupButtonHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF5920A22E353CF00CBFA4D /* PopupButtonHandlerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA1BD8F522E17DBF00896730 /* Multicolore.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Multicolore.otf; sourceTree = "<group>"; };
 		CA1BD8F622E17DBF00896730 /* Multicolore-Vector-Font.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Multicolore-Vector-Font.txt"; sourceTree = "<group>"; };
 		CA1BD8F922E1817600896730 /* collectionRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionRoll.swift; sourceTree = "<group>"; };
+		CA41F6D522E2D08E0045811D /* GameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
+		CA41F6D822E2D11B0045811D /* SpriteKitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitButton.swift; sourceTree = "<group>"; };
+		CA41F6DB22E2D2C10045811D /* SceneManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManagerDelegate.swift; sourceTree = "<group>"; };
+		CA41F6E022E2D4BF0045811D /* OpeningClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningClass.swift; sourceTree = "<group>"; };
+		CA41F6E322E2F5380045811D /* SKNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
 		CA5ABFCA22E08FA900880644 /* Ma-In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ma-In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5ABFCD22E08FA900880644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA5ABFD322E08FA900880644 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -32,6 +45,9 @@
 		CA5ABFDD22E08FAA00880644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA5ABFDF22E08FAA00880644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA5ABFE522E09ADF00880644 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		CAF5920622E33F2300CBFA4D /* bg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bg.wav; sourceTree = "<group>"; };
+		CAF5920822E3539000CBFA4D /* RollPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollPopup.swift; sourceTree = "<group>"; };
+		CAF5920A22E353CF00CBFA4D /* PopupButtonHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButtonHandlerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,48 @@
 			path = ../../../Downloads/Fonts;
 			sourceTree = "<group>";
 		};
+		CA41F6D422E2D06C0045811D /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F6D522E2D08E0045811D /* GameConstants.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		CA41F6D722E2D1070045811D /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F6D822E2D11B0045811D /* SpriteKitButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		CA41F6DA22E2D2A90045811D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F6DB22E2D2C10045811D /* SceneManagerDelegate.swift */,
+				CAF5920A22E353CF00CBFA4D /* PopupButtonHandlerDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CA41F6DF22E2D4A50045811D /* Playing */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F6E022E2D4BF0045811D /* OpeningClass.swift */,
+				CAF5920822E3539000CBFA4D /* RollPopup.swift */,
+			);
+			path = Playing;
+			sourceTree = "<group>";
+		};
+		CA41F6E222E2F5010045811D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA41F6E322E2F5380045811D /* SKNode+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CA5ABFC122E08FA900880644 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +132,12 @@
 		CA5ABFCC22E08FA900880644 /* Ma-In */ = {
 			isa = PBXGroup;
 			children = (
+				CAF5920522E33E4C00CBFA4D /* Sound */,
+				CA41F6E222E2F5010045811D /* Extensions */,
+				CA41F6DF22E2D4A50045811D /* Playing */,
+				CA41F6DA22E2D2A90045811D /* Protocols */,
+				CA41F6D722E2D1070045811D /* Button */,
+				CA41F6D422E2D06C0045811D /* Template */,
 				CA1BD8F422E17DBF00896730 /* Fonts */,
 				CA5ABFCD22E08FA900880644 /* AppDelegate.swift */,
 				CA5ABFE522E09ADF00880644 /* GameScene.sks */,
@@ -86,6 +150,14 @@
 				CA1BD8F922E1817600896730 /* collectionRoll.swift */,
 			);
 			path = "Ma-In";
+			sourceTree = "<group>";
+		};
+		CAF5920522E33E4C00CBFA4D /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				CAF5920622E33F2300CBFA4D /* bg.wav */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +220,7 @@
 			files = (
 				CA5ABFE622E09ADF00880644 /* GameScene.sks in Resources */,
 				CA1BD8F722E17DBF00896730 /* Multicolore.otf in Resources */,
+				CAF5920722E33F2300CBFA4D /* bg.wav in Resources */,
 				CA1BD8F822E17DBF00896730 /* Multicolore-Vector-Font.txt in Resources */,
 				CA5ABFD922E08FA900880644 /* Main.storyboard in Resources */,
 				CA5ABFDB22E08FAA00880644 /* Assets.xcassets in Resources */,
@@ -163,9 +236,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1BD8FA22E1817600896730 /* collectionRoll.swift in Sources */,
+				CA41F6D922E2D11B0045811D /* SpriteKitButton.swift in Sources */,
+				CAF5920B22E353CF00CBFA4D /* PopupButtonHandlerDelegate.swift in Sources */,
+				CA41F6E422E2F5380045811D /* SKNode+Extensions.swift in Sources */,
+				CAF5920922E3539000CBFA4D /* RollPopup.swift in Sources */,
+				CA41F6D622E2D08E0045811D /* GameConstants.swift in Sources */,
+				CA41F6E122E2D4BF0045811D /* OpeningClass.swift in Sources */,
 				CA5ABFD422E08FA900880644 /* GameScene.swift in Sources */,
 				CA5ABFD622E08FA900880644 /* GameViewController.swift in Sources */,
 				CA5ABFCE22E08FA900880644 /* AppDelegate.swift in Sources */,
+				CA41F6DC22E2D2C10045811D /* SceneManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
