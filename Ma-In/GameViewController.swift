@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
     }
     
     func playSounds() {
-        let path = Bundle.main.path(forResource: "bg", ofType: "wav")
+        let path = Bundle.main.path(forResource: "bg", ofType: "mp3")
         let url = URL(fileURLWithPath: path!)
         backgroundMusicPlayer = try! AVAudioPlayer(contentsOf: url)
         backgroundMusicPlayer.numberOfLoops = -1

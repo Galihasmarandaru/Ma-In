@@ -220,6 +220,7 @@ class GameScene: SKScene {
             
             let wait = SKAction.wait(forDuration: 0.2)
             let waitSeq = SKAction.wait(forDuration: (Double(runNum) * 0.6))
+//            let waitIns = SKAction.wait(forDuration: (Double(runNum) * 0.5))
 //            let waitPlayer = SKAction.wait(forDuration: (Double(runNum) * 0.6))
             let block = SKAction.run {
                 num = num + 1
@@ -233,6 +234,8 @@ class GameScene: SKScene {
                 self.scoreLabel.removeFromParent()
                 self.movePiece()
             }
+            
+            
             
 //            let showPlayer = SKAction.run {
 //                self.playerLabel.text = "Player 2 Turn"
@@ -248,13 +251,27 @@ class GameScene: SKScene {
             scoreLabel.position = CGPoint(x: frame.midX, y: frame.maxY - size.height*0.5)
             scoreLabel.zPosition = GameConstants.ZPositions.hudZ
             addChild(scoreLabel)
-            
-//            createAndShowPopup(type: 0, title: GameConstants.StringConstants.pausedKey)
 //
 //            playerLabel.scale(to: size, width: false, multiplier: 0.1)
 //            playerLabel.position = CGPoint(x: frame.midX, y: frame.maxY - size.height*0.5)
 //            playerLabel.zPosition = GameConstants.ZPositions.hudZ
 //            addChild(playerLabel)
+            
+            let a = [3, 7, 11, 15]
+            
+                for i in 0...(a.count - 1) {
+                    if (SKNode().name == "A\(a[i])") ||  (SKNode().name == "B\(a[i])") {
+                        //                            let runInsurance = SKAction.run {
+                        self.createAndShowPopup(type: 0, title: GameConstants.StringConstants.pausedKey)
+                        //                            }
+                        
+                        //                            let ins = SKAction.sequence([waitIns, runInsurance])
+                        //                            scoreLabel.run(SKAction.repeatForever(ins))
+                    } else {
+                        continue
+                    }
+                    break
+                }
         }
     }
     
@@ -281,10 +298,6 @@ class GameScene: SKScene {
         popup!.scale(to: frame.size, width: true, multiplier: 0.8)
         addChild(popup!)
     }
-    
-//    override func update(_ currentTime: CFTimeInterval) {
-//        <#code#>
-//    }
 }
 
 extension GameScene: PopupButtonHandlerDelegate {

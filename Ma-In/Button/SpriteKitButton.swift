@@ -14,6 +14,7 @@ class SpriteKitButton: SKSpriteNode {
     var defaultButton: SKSpriteNode
     var action: (Int) -> ()
     var index: Int
+    let soundPlayer = SoundPlayer()
     
     init(defaultButtonImage: String, action: @escaping (Int) -> (), index: Int) {
         defaultButton = SKSpriteNode(imageNamed: defaultButtonImage)
@@ -31,7 +32,7 @@ class SpriteKitButton: SKSpriteNode {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        run(soundPlayer.buttonSound)
+        run(soundPlayer.buttonSound)
         defaultButton.alpha = 0.75
         
     }
